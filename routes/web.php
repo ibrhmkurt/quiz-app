@@ -33,8 +33,5 @@ Route::group([
     'prefix' => 'admin'
 ], function ()
 {
-   Route::get('deneme', function ()
-   {
-      return 'middleware testi';
-   });
+   Route::resource('quizzes', App\Http\Controllers\Admin\QuizController::class);
 });
